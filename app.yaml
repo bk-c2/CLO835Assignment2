@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app
+spec:
+  containers:
+  - name: app
+    image: 360201675659.dkr.ecr.us-east-1.amazonaws.com/assignment2_app:v0.1
+    ports: 
+    - containerPort: 8080
+      protocol: TCP
+      
