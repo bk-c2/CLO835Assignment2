@@ -5,7 +5,10 @@ metadata:
 spec:
   containers:
   - name: db
-    image: 360201675659.dkr.ecr.us-east-1.amazonaws.com/assignment2_db:v1.0
+    image: 360201675659.dkr.ecr.us-east-1.amazonaws.com/my_db:v1.0
     ports: 
     - containerPort: 3306
       protocol: TCP
+    env:
+    - name: MYSQL_ROOT_PASSWORD
+      value : P@ssw0rd
