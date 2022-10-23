@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: db
+  name: mysql
 spec:
   containers:
   - name: db
