@@ -3,14 +3,14 @@ kind: Namespace
 metadata:
   name: app
   labels:
-    app: app
+    app: employees
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: app
   labels:
-    name: app
+    name: employees
 spec:
   # if your cluster supports it, uncomment the following to automatically create
   # an external load-balanced IP for the frontend service.
@@ -22,5 +22,5 @@ spec:
     # By default and for convenience, the Kubernetes control plane will allocate a port from a range (default: 30000-32767)
     nodePort: 30100
   selector:
-    name: app
+    name: employees
     
