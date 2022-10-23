@@ -1,28 +1,28 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: employees
   labels : 
-    app: app
+    app: employees
+  name: employeesapp
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: app
+      app: employees
   template:
     metadata:
       labels:
-        app: app
+        app: employees
     spec:
       containers:
-      - name: app
+      - name: employeesapp
         image: 360201675659.dkr.ecr.us-east-1.amazonaws.com/my_app:v0.1
         ports: 
         - containerPort: 8080
           protocol: TCP
         env:
         - name: DBHOST
-          value : 10.244.0.9
+          value : 10.244.0.5
         - name: DBUSER
           value : root
         - name: DBPWD
