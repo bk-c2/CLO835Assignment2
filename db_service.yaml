@@ -3,14 +3,14 @@ kind: Namespace
 metadata:
   name: db
   labels:
-    app: db
+    app: mysql
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: db
   labels:
-    name: db
+    name: mysql
 spec:
   # if your cluster supports it, uncomment the following to automatically create
   # an external load-balanced IP for the frontend service.
@@ -19,5 +19,5 @@ spec:
     targetPort: 3306
     # Optional field
   selector:
-    name: db
+    name: mysql
     
