@@ -59,7 +59,7 @@ jobs:
         env:
          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
          ECR_REPOSITORY: my_db
-         IMAGE_TAG: v1.0
+         IMAGE_TAG: v2.0
         run: |
           cd CLOFall_Assignment2/  
           ls -ltra
