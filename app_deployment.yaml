@@ -1,9 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  name: employees1
   labels : 
     app: employees
-  name: employees
+  namespace: employeesapp
 spec:
   replicas: 3
   selector:
@@ -17,12 +18,12 @@ spec:
       containers:
       - name: employeesapp
         image: 360201675659.dkr.ecr.us-east-1.amazonaws.com/my_app:v0.1
-        ports: 
+        ports:
         - containerPort: 8080
           protocol: TCP
         env:
         - name: DBHOST
-          value : 10.244.0.5
+          value : 10.244.0.11
         - name: DBUSER
           value : root
         - name: DBPWD
