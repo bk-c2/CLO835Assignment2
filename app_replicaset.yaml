@@ -3,7 +3,7 @@ kind: ReplicaSet
 metadata:
   labels : 
     app: employees
-  name: employeesapp
+  name: employees
 spec:
   replicas: 3
   selector:
@@ -22,7 +22,7 @@ spec:
           protocol: TCP
         env:
         - name: DBHOST
-          value : 10.244.0.5
+          value : 10.244.0.11
         - name: DBUSER
           value : root
         - name: DBPWD
