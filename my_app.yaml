@@ -13,7 +13,7 @@ spec:
       protocol: TCP
     env:
     - name: DBHOST
-      value :  10.244.0.5
+      value : 10.244.0.11
     - name: DBUSER
       value : root
     - name: DBPWD
